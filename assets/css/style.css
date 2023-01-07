@@ -19,26 +19,35 @@ nav:hover {
 /* Main Content */
 main {
     display: flex;
+    flex-direction: column;
     margin: 5%;
     border: 2px solid white;
     border-radius: 15px;
     min-height: 300px;
 }
-#start {
+#timer {
+    min-height: 18px;
+    text-align: center;
+    margin: 5px 0;
+}
+button {
     align-self: center;
     margin: auto;
     padding: 5px;
     background-color: dimgrey;
     border: 1px solid slategrey;
     border-radius: 5px;
+}
+.activeButton {
     box-shadow: 2px 2px black;
 }
-#start:hover {
+.activeButton:hover {
     background-color: grey;
 }
-#start:active {
+.activeButton:active {
     background-color: darkgrey;
-    box-shadow: none;
+    box-shadow: 0 0 black;
+    transform: translate(2px, 2px);
 }
 /* Footer */
 footer {
