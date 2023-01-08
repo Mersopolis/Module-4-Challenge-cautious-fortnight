@@ -19,6 +19,7 @@ nav:hover {
 /* Main Content */
 main {
     display: flex;
+    position: relative;
     flex-direction: column;
     margin: 5%;
     border: 2px solid white;
@@ -30,24 +31,85 @@ main {
     text-align: center;
     margin: 5px 0;
 }
+/* Buttons */
 button {
     align-self: center;
-    margin: auto;
+    margin: 5px auto;
     padding: 5px;
     background-color: dimgrey;
     border: 1px solid slategrey;
     border-radius: 5px;
-}
-.activeButton {
     box-shadow: 2px 2px black;
 }
-.activeButton:hover {
+button:hover {
     background-color: grey;
 }
-.activeButton:active {
+button:active {
     background-color: darkgrey;
     box-shadow: 0 0 black;
     transform: translate(2px, 2px);
+}
+.disabled {
+    box-shadow: none;
+}
+.disabled:hover {
+    background-color: initial;
+}
+.disabled:active {
+    background-color: initial;
+    box-shadow: none;
+    transform: none;
+}
+/* Answer Indicators */
+.wrongIndicator {
+    padding: 10px;
+    border-radius: 15px 0;
+    background-color: black;
+    color: red;
+    font-size: 30px;
+    opacity: 0;
+    position: absolute;  
+}
+.rightIndicator {
+    padding: 10px;
+    border-radius: 0 15px;
+    background-color: white;
+    color: green;
+    font-size: 30px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+.fadeOut {
+   animation: fadeOut 2s linear forwards;
+   -webkit-animation: fadeOut 2s linear forwards;
+   -moz-animation: fadeOut 2s linear forwards;
+}
+@keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+@-webkit-keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+@-moz-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+/* Questions */
+.questionCard {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+h2 {
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+hr {
+    width: 100%;
 }
 /* Footer */
 footer {
