@@ -27,6 +27,7 @@ main {
     min-height: 300px;
 }
 #timer {
+    font-size: large;
     min-height: 18px;
     text-align: center;
     margin: 5px 0;
@@ -34,6 +35,9 @@ main {
 /* Buttons */
 button {
     align-self: center;
+    font-size: large;
+    min-width: 200px;
+    min-height: 40px;
     margin: 5px auto;
     padding: 5px;
     background-color: dimgrey;
@@ -51,12 +55,13 @@ button:active {
 }
 .disabled {
     box-shadow: none;
+    color: lightgrey;
 }
 .disabled:hover {
-    background-color: initial;
+    background-color: dimgrey;
 }
 .disabled:active {
-    background-color: initial;
+    background-color: dimgrey;
     box-shadow: none;
     transform: none;
 }
@@ -110,6 +115,14 @@ h2 {
 }
 hr {
     width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto 25%;
+}
+input {
+    color: black;
 }
 /* Footer */
 footer {
